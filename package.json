@@ -1,0 +1,191 @@
+{
+  "name": "angular-quickstart",
+  "version": "1.0.0",
+  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "scripts": {
+    "build": "tsc -p src/ -w",
+    "serve": "lite-server -c bs-config.js",
+    "start": "concurrently \"npm run build\" \"npm run serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@types/node": "^7.0.6",
+    "angular-in-memory-web-api": "~0.2.4",
+    "core-js": "^2.4.1",
+    "lite-server": "^2.3.0",
+    "rxjs": "5.0.1",
+    "systemjs": "^0.20.9",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10",
+    "canonical-path": "0.0.2",
+    "tslint": "^3.15.1",
+    "lodash": "^4.16.4",
+    "jasmine-core": "~2.4.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~4.0.14",
+    "rimraf": "^2.5.4",
+    "@types/node": "^7.0.5",
+    "@types/jasmine": "2.5.36"
+  },
+  "jspm": {
+    "name": "angular-quickstart",
+    "main": "angular-quickstart.js",
+    "dependencies": {
+      "@angular/forms": "npm:@angular/forms@^2.4.9",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.4.9",
+      "@angular/router": "npm:@angular/router@^3.4.9",
+      "angular-in-memory-web-api": "npm:angular-in-memory-web-api@^0.3.0",
+      "core-js": "npm:core-js@^2.4.1"
+    },
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.21"
+    },
+    "peerDependencies": {
+      "@angular/common": "npm:@angular/common@2.4.9",
+      "@angular/compiler": "npm:@angular/compiler@^2.4.9",
+      "@angular/core": "npm:@angular/core@2.4.9",
+      "@angular/http": "npm:@angular/http@^2.4.9",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.4.9",
+      "assert": "npm:jspm-nodelibs-assert@^0.2.0",
+      "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
+      "constants": "npm:jspm-nodelibs-constants@^0.2.0",
+      "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
+      "events": "npm:jspm-nodelibs-events@^0.2.0",
+      "fs": "npm:jspm-nodelibs-fs@^0.2.0",
+      "os": "npm:jspm-nodelibs-os@^0.2.0",
+      "path": "npm:jspm-nodelibs-path@^0.2.0",
+      "process": "npm:jspm-nodelibs-process@^0.2.0",
+      "rxjs": "npm:rxjs@^5.2.0",
+      "stream": "npm:jspm-nodelibs-stream@^0.2.0",
+      "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
+      "timers": "npm:jspm-nodelibs-timers@^0.2.0",
+      "util": "npm:jspm-nodelibs-util@^0.2.0",
+      "vm": "npm:jspm-nodelibs-vm@^0.2.0",
+      "zone.js": "npm:zone.js@^0.7.7"
+    },
+    "overrides": {
+      "npm:@angular/common@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/common": ".",
+          "./testing": "./bundles/common-testing.umd.js"
+        }
+      },
+      "npm:@angular/compiler@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/compiler": ".",
+          "./testing": "./bundles/compiler-testing.umd.js"
+        }
+      },
+      "npm:@angular/core@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/core": ".",
+          "./testing": "./bundles/core-testing.umd.js"
+        }
+      },
+      "npm:@angular/http@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/http": ".",
+          "./testing": "./bundles/http-testing.umd.js"
+        }
+      },
+      "npm:@angular/platform-browser-dynamic@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/platform-browser-dynamic": ".",
+          "./testing": "./bundles/platform-browser-dynamic-testing.umd.js"
+        }
+      },
+      "npm:@angular/platform-browser@2.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/platform-browser": ".",
+          "./testing": "./bundles/platform-browser-testing.umd.js"
+        }
+      },
+      "npm:@angular/router@3.4.9": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        },
+        "map": {
+          "@angular/router": ".",
+          "./testing": "./bundles/router-testing.umd.js"
+        }
+      },
+      "npm:inherits@2.0.3": {
+        "ignore": [
+          "test.js"
+        ]
+      }
+    }
+  },
+  "repository": {}
+}
